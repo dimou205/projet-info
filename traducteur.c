@@ -13,9 +13,9 @@ void traducteur(FILE* fichier, FILE* sortie) {
             fprintf(sortie, "!%s ", chaine->argument);
             chaine = chaine->suivant;
         } else if (chaine->lexeme == 'T') {
-            if (chaine->suivant->suivant->lexeme == 'E') {
-                fprintf(sortie, "let %s = ref ", chaine->suivant->argument);
-                chaine = chaine->suivant->suivant->suivant;
+            if (chaine->suivant->suivant->suivant->suivant->lexeme == 'E') {
+                fprintf(sortie, "let %s = ref ", chaine->suivant->suivant->argument);
+                chaine = chaine->suivant->suivant->suivant->suivant->suivant->suivant;
             }
             /* else{
                 étape 5
